@@ -1,4 +1,4 @@
-import json, csv
+import csv
 
 correct_in = list(open("bibtex/correct.bibtex", "r"))
 incorrect_a_in = list(open("bibtex/not_correct_a.bibtex", "r"))
