@@ -51,3 +51,15 @@ if len(correct_in)==len(correct_out):
    for i in range(len(correct_in)):
       print(f"in: {correct_in[i]} -> out: {correct_out[i]}")
 
+final_in_file = correct_in + not_correct_a_in
+final_out_file = correct_out + not_correct_b_out
+
+display_list(final_in_file)
+display_list(final_out_file)
+
+final_file = []
+for i in range(len(final_in_file)):
+   # print(f">>> {i}. in: {final_in_file[i]} -> out: {final_out_file[i]}")
+   if final_in_file[i]!=final_out_file[i]:
+     print(f">>> {i}. in: {final_in_file[i]} -> out: {final_out_file[i]}")
+
