@@ -1,4 +1,4 @@
-import csv, pprint
+import csv, pprint, random
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
 from nltk.tokenize import blankline_tokenize
@@ -88,6 +88,10 @@ for i in range(shift):
 # create final lists
 input_ = correct_in + incorrect_a_in[:len(incorrect_a_in)//2]
 output_ = correct_out + incorrect_b_out[:len(incorrect_b_out)//2]
+
+# shuffle lists
+random.Random(4).shuffle(input_)
+random.Random(4).shuffle(output_)
 
 incorr, tt = 0, 0
 
